@@ -1,0 +1,60 @@
+
+
+.carousel-wrapper {
+  position: relative;
+  top: -20px; /* Adjust this value as needed */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items (buttons) at the center horizontally */
+  justify-content: center; /* Align items (buttons) at the center vertically */
+  width: 100%; /* Ensure the container spans the full width of the carousel caption */
+  margin-top: 10px; /* Add margin to provide some space between the caption and buttons */
+}
+
+.button-container .btn {
+  margin-bottom: 10px; /* Add margin to provide some space between the buttons */
+  border-radius: 0; /* Remove the border radius */
+}
+.button-container .btn:hover {
+  background-color: #fff; /* Change the background color on hover */
+  color: #000; /* Change the text color on hover */
+}
+
+.transparent-btn {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  margin-bottom: 10px;
+  padding: 5px 10px; /* Add padding to provide some space around the text */
+  font-size: inherit; /* Inherit font size from the parent */
+  line-height: normal; /* Set line height to normal to prevent unnecessary spacing */
+}
+
+.transparent-btn:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.carousel-caption {
+  width: 100%; /* Adjust the width for better readability */
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Move the caption to the center horizontally and vertically */
+}
+
+/* Home.css */
+/* Add this CSS rule */
+.carousel-container {
+  margin-bottom: 0; /* Remove the default margin */
+}
+
+@media (max-width: 576px) {
+  .carousel-caption {
+    top: 43%; /* Adjust the top position for better readability on smaller screens */
+  }
+}
+
