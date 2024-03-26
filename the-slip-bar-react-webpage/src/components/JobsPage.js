@@ -59,13 +59,14 @@ const JobsPage = () => {
                 <p>Location: {job.location}</p>
                 <p>Job ID: {job.id}</p>
                 {expandedJob === job.id ? (
-                  <div className="job-details">
+                  <div className="details">
+                    <p>{job.description}</p>
                     <div className="instructions">
                       <p>Please email your resume to <a href={`mailto:info@theslipbar.com?subject=Applying for job ID ${job.id}`}>info@theslipbar.com</a> with the job ID {job.id} in the Subject field</p>
                     </div>
                   </div>
                 ) : (
-                  <button className="apply-button">Apply Now</button>
+                  <button className="apply-button">Details</button>
                 )}
               </div>
             </div>
