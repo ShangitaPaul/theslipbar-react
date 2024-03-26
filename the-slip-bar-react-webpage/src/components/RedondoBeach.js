@@ -62,7 +62,7 @@ const RedondoBeach = () => {
              <Carousel.Item key={index}>
               <img className="d-block w-100" src={slide.link} alt={slide.title} />
               <div className="carousel-caption position-absolute">
-                <div className="af-position-lg af-bg-dark-transparent py-3">
+                <div className="af-position-lg af-bg-dark-transparent py-5">
                   <h3>{slide.title}</h3>
                   <p>{slide.description}</p>
                 </div>
