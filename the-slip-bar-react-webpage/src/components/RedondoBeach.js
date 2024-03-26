@@ -27,7 +27,8 @@ const RedondoBeach = () => {
   return (
     <div className="Redondo Beach">
       <br />
-      <h1 style={{ fontFamily: 'Pacifico, cursive', fontSize: '3.5rem', marginBottom: '0' }}>Redondo Beach</h1>
+      <img src="/img/redondo-beach-header.png" alt="Redondo Beach Logo" style={{ display: "block", width: "60%", height: "auto",  margin: "0 auto" }} // Centering the image
+      />
       <p>120 N International Boardwalk, Redondo Beach, CA 90277</p>
       <a
         href="https://www.google.com/maps/dir//120+N+International+Boardwalk,+Redondo+Beach,+CA+90277"
@@ -73,7 +74,7 @@ const RedondoBeach = () => {
       </div>
 
       <Container className="py-7" id="contact">
-      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2.5rem', marginTop:'50px', marginBottom: '10px' }}>Contact</h3>
+      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2rem', marginTop:'50px', marginBottom: '10px' }}>Contact</h3>
         <Row>
           <Col md={6}>
             <h2>Hours of Operation</h2>
@@ -95,7 +96,7 @@ const RedondoBeach = () => {
       </Container>
 
       <Container id="menu">
-      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2.5rem', marginTop:'50px', marginBottom: '10px' }}>Menu</h3>
+      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2rem', marginTop:'50px', marginBottom: '10px' }}>Menu</h3>
       <Row>
         <Col md={12} style={{ width: carouselWidth }}> {/* Use 12 columns for full width */}
           {redondoBeachMenu1 && (

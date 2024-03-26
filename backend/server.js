@@ -44,6 +44,13 @@ const jobs = [
     description: 'Prepares and cooks food according to menu specifications.',
     location: 'Lomita',
     email: 'info@theslipbar.com' // Email for applying to the job
+  },
+  {
+    id: 6,
+    title: 'Bartender',
+    description: 'Prepares and cooks food according to menu and safety specifications.',
+    location: 'Lomita',
+    email: 'info@theslipbar.com' // Email for applying to the job
   }
 ];
 

@@ -15,10 +15,13 @@ function Navigation() {
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img
-            src="/img/slip-banner-logo.png"
+            src="/img/thesliplogo.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
             alt="The Slip Bar"
-            style={{ width: '250px', height: 'auto', marginLeft: 'auto', marginRight: '110px' }}
           />
+      
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
         <Navbar.Collapse id="basic-navbar-nav" expanded={expanded} onToggle={handleToggle}>

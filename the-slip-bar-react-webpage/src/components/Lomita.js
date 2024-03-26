@@ -4,7 +4,7 @@ import { Container, Row, Col, Nav } from "react-bootstrap";
 import lomitaCarouselImages from "../data/lomitaCarouselImages";
 import lomitaMenu1 from "../img/lomitamenupage2.jpg";
 import lomitaMenu2 from "../img/lomitamenupage1.jpg"; // Corrected file extension
-import "./RedondoBeach.css";
+import "./Lomita.css";
 
 
 const Lomita = () => {
@@ -27,7 +27,8 @@ const Lomita = () => {
   return (
     <div className="Lomita">
       <br />
-      <h1 style={{ fontFamily: 'Pacifico, cursive', fontSize: '3.5rem', marginBottom: '0' }}>Lomita</h1>
+      <img src="/img/lomita-header.png" alt="Redondo Beach Logo" style={{ display: "block", width: "70%", height: "auto",  margin: "0 auto" }} // Centering the image
+      />
       <p> 24503 Narbonne Ave. Lomita, CA 90717 </p>
       <a
         href="https://www.google.com/maps/dir//24503+Narbonne+Ave.+Lomita,+CA+90717"
@@ -72,7 +73,7 @@ const Lomita = () => {
       </div>
 
       <Container className="py-7" id="contact">
-      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2.5rem', marginTop:'50px', marginBottom: '10px' }}>Contact</h3>
+      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2rem', marginTop:'50px', marginBottom: '10px' }}>Contact</h3>
         <Row>
           <Col md={6}>
             <h2>Hours of Operation</h2>
@@ -94,7 +95,7 @@ const Lomita = () => {
       </Container>
 
       <Container id="menu">
-      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2.5rem', marginTop:'50px', marginBottom: '10px' }}>Menu</h3>
+      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2rem', marginTop:'50px', marginBottom: '10px' }}>Menu</h3>
         <Row>
           <Col md={12}>
             {lomitaMenu1 && (

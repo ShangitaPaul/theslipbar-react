@@ -43,7 +43,7 @@ const JobsPage = () => {
     <div className="jobs-page">
       <h1 className="page-title">Come Join Us!</h1>
       <div className="filter-section">
-        <label htmlFor="locationFilter">Filter by Location:</label>
+        <label htmlFor="locationFilter">Filter by Location{''} </label>
         <select id="locationFilter" value={locationFilter} onChange={e => setLocationFilter(e.target.value)}>
           <option value="">All Locations</option>
           <option value="Lomita">Lomita</option>
@@ -62,11 +62,11 @@ const JobsPage = () => {
                   <div className="details">
                     <p>{job.description}</p>
                     <div className="instructions">
-                      <p>Please email your resume to <a href={`mailto:info@theslipbar.com?subject=Applying for job ID ${job.id}`}>info@theslipbar.com</a> with the job ID {job.id} in the Subject field</p>
+                      <p>Please email your resume to <a href={`mailto:info@theslipbar.com?subject=Applying for job ID ${job.id}`}>info@theslipbar.com</a> with "Job ID {job.id}" in the Subject field</p>
                     </div>
                   </div>
                 ) : (
-                  <button className="apply-button">Details</button>
+                  <button className="details-button">Details</button>
                 )}
               </div>
             </div>
