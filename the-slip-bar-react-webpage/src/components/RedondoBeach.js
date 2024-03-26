@@ -6,7 +6,6 @@ import redondoBeachMenu1 from "../img/redondomenupage1.png";
 import redondoBeachMenu2 from "../img/redondomenupage1.jpg";
 import "./RedondoBeach.css";
 
-
 const RedondoBeach = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [carouselWidth, setCarouselWidth] = useState(null);
@@ -24,22 +23,12 @@ const RedondoBeach = () => {
       document.body.removeChild(script);
     };
   }, []);
+
   return (
     <div className="Redondo Beach">
-      <br />
-      <img src="/img/redondo-beach-header.png" alt="Redondo Beach Logo" style={{ display: "block", width: "60%", height: "auto",  margin: "0 auto" }} // Centering the image
-      />
-      <p>120 N International Boardwalk, Redondo Beach, CA 90277</p>
-      <a
-        href="https://www.google.com/maps/dir//120+N+International+Boardwalk,+Redondo+Beach,+CA+90277"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Get Directions
-      </a>
+      <h6>The Slip Bar</h6>
+      <h4>Redondo Beach</h4>
 
-      <br />
-      
       {/* Navigation Menu */}
       <Nav defaultActiveKey="#contact" className="justify-content-center custom-nav">
         <Nav.Item>
@@ -60,7 +49,7 @@ const RedondoBeach = () => {
           interval={2000} // Set interval to 2 seconds for faster scrolling
         >
           {redondoBeachCarouselImages.map((slide, index) => (
-             <Carousel.Item key={index}>
+            <Carousel.Item key={index}>
               <img className="d-block w-100" src={slide.link} alt={slide.title} />
               <div className="carousel-caption position-absolute">
                 <div className="af-position-lg af-bg-dark-transparent py-5">
@@ -74,59 +63,60 @@ const RedondoBeach = () => {
       </div>
 
       <Container className="py-7" id="contact">
-      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2rem', marginTop:'50px', marginBottom: '10px' }}>Contact</h3>
+        <h5>Contact</h5>
         <Row>
-          <Col md={6}>
+          <Col md={4}>
             <h2>Hours of Operation</h2>
             <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
             <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
             <p>Sunday: 10:00 AM - 9:00 PM</p>
           </Col>
-          <Col md={6}>
+          <Col md={4}>
+            <h2>Address</h2>
+            <p>120 N International Boardwalk</p>
+            <p>Redondo Beach, CA 90277</p>
+            <a href="https://www.google.com/maps/dir//120+N+International+Boardwalk+Redondo+Beach,+CA+90277" rel="noreferrer">Get Directions</a>
+          </Col>
+          <Col md={4}>
             <h2>Contact Information</h2>
             <p>Phone: (310) 921-8940</p>
-            <p>Email: {''}
-              <a href="info@theslipbar.com">
-                info@theslipbar.com
-              </a>
-            </p>
-
+            <p>Email: <a href="mailto:info@theslipbar.com">info@theslipbar.com</a></p>
           </Col>
         </Row>
       </Container>
 
       <Container id="menu">
-      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2rem', marginTop:'50px', marginBottom: '10px' }}>Menu</h3>
-      <Row>
-        <Col md={12} style={{ width: carouselWidth }}> {/* Use 12 columns for full width */}
-          {redondoBeachMenu1 && (
-            <img
-              src={redondoBeachMenu1}
-              alt="Menu Page 1"
-              className="img-fluid"
-              style={{ maxWidth: "100%" }}
-              onError={(e) => console.error("Error loading menu image 1:", e)}
-            />
-          )}
-        </Col>
-      </Row>
-      <Row>
-        <Col md={12} style={{ width: carouselWidth }}>
-          {redondoBeachMenu2 && (
-            <img
-              src={redondoBeachMenu2}
-              alt="Menu Page 2"
-              className="img-fluid"
-              style={{ maxWidth: "100%" }}
-              onError={(e) => console.error("Error loading menu image 2:", e)}
-            />
-          )}
-        </Col>
-      </Row>
-    </Container>
+        <h5>Menu</h5>
+        <Row>
+          <Col md={12} style={{ width: carouselWidth }}>
+            {redondoBeachMenu1 && (
+              <img
+                src={redondoBeachMenu1}
+                alt="Menu Page 1"
+                className="img-fluid"
+                style={{ maxWidth: "100%" }}
+                onError={(e) => console.error("Error loading menu image 1:", e)}
+              />
+            )}
+          </Col>
+        </Row>
+        <Row>
+          <Col md={12} style={{ width: carouselWidth }}>
+            {redondoBeachMenu2 && (
+              <img
+                src={redondoBeachMenu2}
+                alt="Menu Page 2"
+                className="img-fluid"
+                style={{ maxWidth: "100%" }}
+                onError={(e) => console.error("Error loading menu image 2:", e)}
+              />
+            )}
+          </Col>
+        </Row>
+      </Container>
 
       <Container className="py-7" id="events">
-      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2.5rem', marginTop:'50px', marginBottom: '10px' }}>Events</h3>
+        <h5>Events</h5>
         <div
           data-tockify-component="calendar"
           data-tockify-calendar="theslipbar"

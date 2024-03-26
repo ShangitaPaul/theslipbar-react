@@ -8,8 +8,8 @@ const Contact = () => {
   const socialMediaStyle = { color: '#0d4d9d' }; // Custom style for social media icons and text
 
   return (
-    <div className='af-height-90 af-max-width mx-auto mt-2 position-relative'>
-      <Container id="menu">
+    <div>
+      <Container>
         <h1>Get in Touch!</h1>
         <Row>
           <Col md={6}>

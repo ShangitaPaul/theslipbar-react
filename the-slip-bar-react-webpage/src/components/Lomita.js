@@ -6,7 +6,6 @@ import lomitaMenu1 from "../img/lomitamenupage2.jpg";
 import lomitaMenu2 from "../img/lomitamenupage1.jpg"; // Corrected file extension
 import "./Lomita.css";
 
-
 const Lomita = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [carouselWidth, setCarouselWidth] = useState(null);
@@ -24,21 +23,12 @@ const Lomita = () => {
       document.body.removeChild(script);
     };
   }, []);
+
   return (
     <div className="Lomita">
-      <br />
-      <img src="/img/lomita-header.png" alt="Redondo Beach Logo" style={{ display: "block", width: "70%", height: "auto",  margin: "0 auto" }} // Centering the image
-      />
-      <p> 24503 Narbonne Ave. Lomita, CA 90717 </p>
-      <a
-        href="https://www.google.com/maps/dir//24503+Narbonne+Ave.+Lomita,+CA+90717"
-        rel="noreferrer"
-      >
-        Get Directions
-      </a>
+      <h6>The Slip Bar</h6>
+      <h4>Lomita</h4>
 
-      <br />
-      
       {/* Navigation Menu */}
       <Nav defaultActiveKey="#contact" className="justify-content-center custom-nav">
         <Nav.Item>
@@ -51,7 +41,7 @@ const Lomita = () => {
           <Nav.Link href="#events" className="custom-link">Events</Nav.Link>
         </Nav.Item>
       </Nav>
-      
+
       <div className='af-height-90 af-max-width mx-auto mt-2 position-relative'>
         <Carousel
           activeIndex={currentIndex}
@@ -59,7 +49,7 @@ const Lomita = () => {
           interval={2000} // Set interval to 2 seconds for faster scrolling
         >
           {lomitaCarouselImages.map((slide, index) => (
-             <Carousel.Item key={index}>
+            <Carousel.Item key={index}>
               <img className="d-block w-100" src={slide.link} alt={slide.title} />
               <div className="carousel-caption position-absolute">
                 <div className="af-position-lg af-bg-dark-transparent py-5">
@@ -73,29 +63,29 @@ const Lomita = () => {
       </div>
 
       <Container className="py-7" id="contact">
-      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2rem', marginTop:'50px', marginBottom: '10px' }}>Contact</h3>
+        <h5>Contact</h5>
         <Row>
-          <Col md={6}>
+          <Col md={4}>
             <h2>Hours of Operation</h2>
             <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
             <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
             <p>Sunday: 10:00 AM - 9:00 PM</p>
           </Col>
-          <Col md={6}>
+          <Col md={4}>
+            <h2>Address</h2>
+            <p>24503 Narbonne Ave, Lomita, CA 90717</p>
+            <a href="https://www.google.com/maps/dir//24503+Narbonne+Ave.+Lomita,+CA+90717" rel="noreferrer">Get Directions</a>
+          </Col>
+          <Col md={4}>
             <h2>Contact Information</h2>
             <p>Phone: (424) 376-6947</p>
-            <p>Email: {''}
-              <a href="info@theslipbar.com">
-                info@theslipbar.com
-              </a>
-            </p>
-
+            <p>Email: <a href="mailto:info@theslipbar.com">info@theslipbar.com</a></p>
           </Col>
         </Row>
       </Container>
 
       <Container id="menu">
-      <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2rem', marginTop:'50px', marginBottom: '10px' }}>Menu</h3>
+        <h5>Menu</h5>
         <Row>
           <Col md={12}>
             {lomitaMenu1 && (
@@ -125,7 +115,7 @@ const Lomita = () => {
       </Container>
 
       <Container className="py-7" id="events">
-        <h3 style={{ fontFamily: 'Pacifico, cursive', fontSize: '2.5rem', marginTop: '50px', marginBottom: '10px' }}>Events</h3>
+        <h5>Events</h5>
         <div
           data-tockify-component="calendar"
           data-tockify-calendar="theslipbar"
