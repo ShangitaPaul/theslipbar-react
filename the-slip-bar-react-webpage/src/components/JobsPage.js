@@ -1,22 +1,19 @@
-// JobsPage.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import JobList from './JobList';
-import JobDetail from './JobDetail';
-import './JobsPage.css';
+import './JobsPage.css'; // Import CSS file for styling
 
 const JobsPage = () => {
   const [jobs, setJobs] = useState([]);
-  const [selectedJob, setSelectedJob] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [filteredJobs, setFilteredJobs] = useState([]);
+  const [locationFilter, setLocationFilter] = useState('');
+  const [expandedJob, setExpandedJob] = useState(null);
 
   useEffect(() => {
     const fetchJobs = async () => {
       try {
         const response = await axios.get('http://localhost:5000/jobs');
         setJobs(response.data);
-        setLoading(false);
+        setFilteredJobs(response.data);
       } catch (error) {
         console.error('Error fetching jobs:', error);
       }
@@ -25,25 +22,55 @@ const JobsPage = () => {
     fetchJobs();
   }, []);
 
+  useEffect(() => {
+    if (locationFilter) {
+      const filtered = jobs.filter(job => job.location === locationFilter);
+      setFilteredJobs(filtered);
+    } else {
+      setFilteredJobs(jobs);
+    }
+  }, [locationFilter, jobs]);
+
   const handleJobClick = jobId => {
-    const job = jobs.find(job => job.id === jobId);
-    setSelectedJob(job);
+    if (expandedJob === jobId) {
+      setExpandedJob(null); // Collapse if already expanded
+    } else {
+      setExpandedJob(jobId); // Expand otherwise
+    }
   };
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   return (
-    <div>
-      <h1>Job Search</h1>
-      <div style={{ display: 'flex' }}>
-        <div style={{ flex: 1 }}>
-          <JobList jobs={jobs} handleJobClick={handleJobClick} />
-        </div>
-        <div style={{ flex: 2 }}>
-          {selectedJob ? <JobDetail job={selectedJob} /> : <p>Please select a job</p>}
-        </div>
+    <div className="jobs-page">
+      <h1 className="page-title">Explore Job Opportunities</h1>
+      <div className="filter-section">
+        <label htmlFor="locationFilter">Filter by Location:</label>
+        <select id="locationFilter" value={locationFilter} onChange={e => setLocationFilter(e.target.value)}>
+          <option value="">All Locations</option>
+          <option value="Lomita">Lomita</option>
+          <option value="Redondo Beach">Redondo Beach</option>
+        </select>
+      </div>
+      <div className="jobs-container">
+        {filteredJobs.map(job => (
+          <div key={job.id} className={`job-card ${expandedJob === job.id ? 'expanded' : ''}`}>
+            <div className="job-header" onClick={() => handleJobClick(job.id)}>
+              <div className="job-header-content">
+                <h2>{job.title.charAt(0).toUpperCase() + job.title.slice(1)}</h2>
+                <p>Location: {job.location}</p>
+                <p>Job ID: {job.id}</p>
+                {expandedJob === job.id ? (
+                  <div className="job-details">
+                    <div className="instructions">
+                      <p>Please email your resume to <a href={`mailto:info@theslipbar.com?subject=Applying for job ID ${job.id}`}>info@theslipbar.com</a> with the job ID {job.id} in the Subject field</p>
+                    </div>
+                  </div>
+                ) : (
+                  <button className="apply-button">Apply Now</button>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

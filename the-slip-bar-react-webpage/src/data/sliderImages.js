@@ -32,7 +32,7 @@ const SLIDER_IMAGES = [
 
   {
     link:
-      "./img/randy.jpeg",
+      "./img/smashburger.jpeg",
       title: "From the Beach to the 'Burbs",
       description: "Explore our offerings in the South Bay",
       buttonTextRedondo: "Redondo Beach",

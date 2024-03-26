@@ -1,26 +1,27 @@
-
-
-.carousel-wrapper {
-  position: relative;
-  top: -20px; /* Adjust this value as needed */
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 
 .button-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Align items (buttons) at the center horizontally */
-  justify-content: center; /* Align items (buttons) at the center vertically */
-  width: 100%; /* Ensure the container spans the full width of the carousel caption */
-  margin-top: 10px; /* Add margin to provide some space between the caption and buttons */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 20px;
+  font-size: larger;
+  
+
 }
 
 .button-container .btn {
-  margin-bottom: 10px; /* Add margin to provide some space between the buttons */
-  border-radius: 0; /* Remove the border radius */
+  margin-bottom: 20px;
+  border-radius: 0;
 }
+
 .button-container .btn:hover {
-  background-color: #fff; /* Change the background color on hover */
-  color: #000; /* Change the text color on hover */
+  background-color: #fff;
+  color: #000;
 }
 
 .transparent-btn {
@@ -28,9 +29,9 @@
   color: #fff !important;
   border: 1px solid #fff !important;
   margin-bottom: 10px;
-  padding: 5px 10px; /* Add padding to provide some space around the text */
-  font-size: inherit; /* Inherit font size from the parent */
-  line-height: normal; /* Set line height to normal to prevent unnecessary spacing */
+  padding: 5px 10px;
+  font-size: inherit;
+  line-height: normal;
 }
 
 .transparent-btn:hover {
@@ -38,23 +39,66 @@
   color: #000 !important;
 }
 
+.carousel-container {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
 .carousel-caption {
-  width: 100%; /* Adjust the width for better readability */
+  width: 100%;
   position: absolute;
   top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Move the caption to the center horizontally and vertically */
+  transform: translate(-50%, -50%);
 }
 
-/* Home.css */
-/* Add this CSS rule */
-.carousel-container {
-  margin-bottom: 0; /* Remove the default margin */
+.carousel-indicators {
+  display: none;
 }
 
+/* Media query for screens with a maximum width of 576px */
 @media (max-width: 576px) {
+
   .carousel-caption {
-    top: 43%; /* Adjust the top position for better readability on smaller screens */
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(2%);
+    width: 100%;
+    margin: 5px 5px;
+    font-size: larger;
+    height: auto;
+    margin-bottom: -40px;
+    margin-top: 10px
+
+
+  }
+
+  .button-container .btn {
+    margin-bottom: 16px;
+    border-radius: 0;
+  }
+
+
+  
+  .carousel-indicators {
+    display: none;
   }
 }
+
+/* End of snippet from the-slip-bar-react-webpage/src/styles/Home.css */
 

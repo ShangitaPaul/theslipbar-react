@@ -17,7 +17,7 @@ function Navigation() {
           <img
             src="/img/slip-banner-logo.png"
             alt="The Slip Bar"
-            style={{ width: '220px', height: 'auto', marginLeft: 'auto', marginRight: '110px' }}
+            style={{ width: '250px', height: 'auto', marginLeft: 'auto', marginRight: '110px' }}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />

@@ -3,6 +3,12 @@
   margin-bottom: 0;
 }
 
+.navbar-brand {
+  padding: 0;
+  margin-bottom: 1%;
+
+}
+
 .NavDropdown.Item {
   align-items: center;
     display: flex;
@@ -11,3 +17,19 @@
     padding: 0;
     list-style: none;
 }
+
+.NavDropdown.Item a {
+  align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+
+

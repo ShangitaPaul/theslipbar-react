@@ -11,7 +11,7 @@ const Home = () => {
     const interval = setInterval(() => {
       const nextIndex = (currentIndex + 1) % SLIDER_IMAGES.length;
       setCurrentIndex(nextIndex);
-    }, 5000);
+    }, 2050);
 
     return () => clearInterval(interval);
   }, [currentIndex]);
@@ -19,8 +19,13 @@ const Home = () => {
   const currentSlide = SLIDER_IMAGES[currentIndex];
 
   return (
-    <div className='af-height-90 af-max-width mx-auto mt-0 position-relative'>
-      <Carousel activeIndex={currentIndex} onSelect={() => {}}>
+    <div className='af-height-90 af-max-width mx-auto mt-2 position-relative'>
+      <Carousel
+        activeIndex={currentIndex}
+        onSelect={(index) => setCurrentIndex(index)}
+        controls={true}
+        indicators={true}
+      >
         {SLIDER_IMAGES.map((slide, index) => (
           <Carousel.Item key={index}>
             <img className='d-block w-100' src={slide.link} alt={slide.title} />
@@ -28,11 +33,13 @@ const Home = () => {
         ))}
       </Carousel>
       <div className='carousel-caption position-absolute'>
-        <div className='af-position-lg af-bg-dark-transparent py-3'>
+        <div className='af-position-lg af-bg-dark-transparent py-5'>
           <h3>{currentSlide.title}</h3>
           <p>{currentSlide.description}</p>
           <div className='button-container'>
             <Link to='/redondo-beach' className='btn btn-primary transparent-btn'>Redondo Beach</Link>
+            {' '}
+            {''}
             <Link to='/lomita' className='btn btn-primary transparent-btn'>Lomita</Link>
           </div>
         </div>

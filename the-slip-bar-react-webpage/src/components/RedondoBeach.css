@@ -5,12 +5,23 @@
 
 /* Apply Montserrat font to elements */
 
+
 body {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   font-size: 1rem;
-  padding: 20px;
+  margin: 0;
 }
+
+
+.carousel-container {
+  width: 100%;
+}
+
+.carousel-content {
+  width: 100%;
+}
+
 
 h1 {
   font-weight: 400;
@@ -29,6 +40,23 @@ h3, h4, h5, h6 {
   font-size: 1.5rem;
   margin: 5px 0;
 }
+
+.menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu .img-fluid {
+  width: 100%;
+  height: auto;
+}
+
 
 /* Center-align text */
 .text-center {

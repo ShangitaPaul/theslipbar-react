@@ -1,104 +1,35 @@
-import React, { useState } from "react";
-
+import React from 'react';
+import { Container, Row, Col, Nav } from "react-bootstrap";
+import './Contact.css';
 const Contact = () => {
-  const [state, setState] = useState({
-    email: "",
-    firstName: "",
-    lastName: "",
-    phone: "",
-    message: ""
-  });
-
-  const handleFirstNameChange = event => {
-    setState({ ...state, firstName: event.target.value });
-  };
-
-  const handleLastNameChange = event => {
-    setState({ ...state, lastName: event.target.value });
-  };
-
-  const handleEmailChange = event => {
-    setState({ ...state, email: event.target.value });
-  };
-
-  const handlePhoneNumberChange = event => {
-    setState({ ...state, phone: event.target.value });
-  };
-
-  const handleMessageChange = event => {
-    setState({ ...state, message: event.target.value });
-  };
-
-  const handleSubmit = event => {
-    console.log("submitted");
-    event.preventDefault();
-  };
-
   return (
-    <div>
-      <h3 className='text-center mt-3'>Contact us</h3>
-      <h5 className='font-italic text-center'>
-        *For table reservations and other questions, please fill out the
-        complete form
-      </h5>
-      <form onSubmit={handleSubmit} className='mt-5' action=''>
-        <div className='form-group w-50 mx-auto'>
-          <label htmlFor='firstName'>First Name</label>
-          <input
-            onChange={handleFirstNameChange}
-            value={state.firstName}
-            type='text'
-            className='form-control'
-            id='firstName'
-          />
-        </div>
-        <div className='form-group w-50 mx-auto'>
-          <label htmlFor='lastName'>Last Name</label>
-          <input
-            onChange={handleLastNameChange}
-            value={state.lastName}
-            type='text'
-            className='form-control'
-            id='lastName'
-          />
-        </div>
-        <div className='form-group w-50 mx-auto'>
-          <label htmlFor='email'>Email Address</label>
-          <input
-            onChange={handleEmailChange}
-            value={state.email}
-            type='email'
-            className='form-control'
-            id='email'
-          />
-        </div>
-        <div className='form-group w-50 mx-auto'>
-          <label htmlFor='phoneNumber'>Phone Number</label>
-          <input
-            onChange={handlePhoneNumberChange}
-            value={state.phone}
-            type='tel'
-            className='form-control'
-            id='phoneNumber'
-          />
-        </div>
-        <div className='form-group w-50 mx-auto'>
-          <label htmlFor='message'>Message</label>
-          <textarea
-            onChange={handleMessageChange}
-            value={state.message}
-            type='tel'
-            className='form-control'
-            id='message'
-            rows='7'
-          ></textarea>
-          <button type='submit' className='btn btn-primary mt-4 px-5'>
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
+    <div className='af-height-90 af-max-width mx-auto mt-2 position-relative'>
+    <Container id="menu">
+        <h1>Contact Us!</h1>
+        <br>
+        </br>
+        <h2> Email:</h2>
+        <p> info@theslipbar.com</p>
+        <br>
+          </br>
+        <Row>
+          <Col md={6}>
+            <h2> The Slip Lomita</h2>
+            <p> 24503 Narbonne Ave.</p>
+            <p>Lomita, CA 90717</p>
+            <p> Phone:  (424) 376-6947</p>
+          </Col>
+          <Col md={6}>
+            <h2> The Slip Redondo Beach</h2>
+            <p> 120 N. International Boardwalk</p>
+            <p>Redondo Beach, CA 90277</p>
+            <p> Phone: (310) 376-8910</p>
+          </Col>
+      
+        </Row>
+      </Container>
+    </div>  
   );
-};
+}
 
 export default Contact;
