@@ -5,14 +5,17 @@ const Contact = () => {
   return (
     <div className='af-height-90 af-max-width mx-auto mt-2 position-relative'>
     <Container id="menu">
-        <h1>Contact Us!</h1>
+        <h1>Get in Touch!</h1>
         <br>
         </br>
         <h2> Email:</h2>
         <p> info@theslipbar.com</p>
         <br>
-          </br>
+        </br>
+
         <Row>
+          <br>
+          </br>
           <Col md={6}>
             <h2> The Slip Lomita</h2>
             <p> 24503 Narbonne Ave.</p>
@@ -25,6 +28,7 @@ const Contact = () => {
             <p>Redondo Beach, CA 90277</p>
             <p> Phone: (310) 376-8910</p>
           </Col>
+        
       
         </Row>
       </Container>

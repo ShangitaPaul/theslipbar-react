@@ -33,7 +33,7 @@ const Home = () => {
         ))}
       </Carousel>
       <div className='carousel-caption position-absolute'>
-        <div className='af-position-lg af-bg-dark-transparent py-5'>
+        <div className='af-position-lg af-bg-dark-transparent py-4'>
           <h3>{currentSlide.title}</h3>
           <p>{currentSlide.description}</p>
           <div className='button-container'>

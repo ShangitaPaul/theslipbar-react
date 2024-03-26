@@ -41,7 +41,7 @@ const JobsPage = () => {
 
   return (
     <div className="jobs-page">
-      <h1 className="page-title">Explore Job Opportunities</h1>
+      <h1 className="page-title">Come Join Us!</h1>
       <div className="filter-section">
         <label htmlFor="locationFilter">Filter by Location:</label>
         <select id="locationFilter" value={locationFilter} onChange={e => setLocationFilter(e.target.value)}>
