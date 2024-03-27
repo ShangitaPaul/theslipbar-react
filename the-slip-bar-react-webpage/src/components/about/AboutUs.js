@@ -1,15 +1,23 @@
 import React, { Component } from "react";
-import COMPANY_DESCRIPTION from "../../data/companyDescription";
 
 class AboutUs extends Component {
   render() {
     return (
       <div className='container'>
-        <h3 className='text-center mt-5 '>About Us</h3>
-        <div className='af-grey text-center my-3'>{COMPANY_DESCRIPTION}</div>
+        <h1>Our Story</h1>
+        <p>
+          Whether the waterfront in Redondo Beach or in the cozy neighborhood nook of Lomita, we are a friendly local spot specializing in craft and locally brewed beers, spirits, and delicious eats!
+        </p>
+        <p>
+          At The Slip, we don't think the food at a bar has be flavorless. Along with delicious wings, pizza, burgers, and fries, we offer a Blue Zones Certified menu with plenty of healthy and vegetarian choices.
+        </p>
+        <p>
+          We also have gorgeous outdoor seating and live music and entertainment all week long. We are proud to be a part of the South Bay community and look forward to serving you soon!
+        </p>
       </div>
     );
   }
+
 }
 
 export default AboutUs;
