@@ -20,6 +20,7 @@ class About extends Component {
           style={{
             width: '50%',
             height: 'auto',
+            marginTop: '20px',
       
           }}
         />

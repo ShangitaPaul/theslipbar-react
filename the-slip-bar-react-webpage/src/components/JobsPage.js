@@ -31,7 +31,7 @@ const JobsPage = () => {
     }
   }, [locationFilter, jobs]);
 
-  const handleJobClick = jobId => {
+  const toggleJobDetails = jobId => {
     if (expandedJob === jobId) {
       setExpandedJob(null); // Collapse if already expanded
     } else {
@@ -53,20 +53,21 @@ const JobsPage = () => {
       <div className="jobs-container">
         {filteredJobs.map(job => (
           <div key={job.id} className={`job-card ${expandedJob === job.id ? 'expanded' : ''}`}>
-            <div className="job-header" onClick={() => handleJobClick(job.id)}>
+            <div className="job-header">
               <div className="job-header-content">
                 <h2>{job.title.charAt(0).toUpperCase() + job.title.slice(1)}</h2>
                 <p>Location: {job.location}</p>
                 <p>Job ID: {job.id}</p>
-                {expandedJob === job.id ? (
+                <button className="details-button" onClick={() => toggleJobDetails(job.id)}>
+                  {expandedJob === job.id ? 'Close Details' : 'Open Details'}
+                </button>
+                {expandedJob === job.id && (
                   <div className="details">
                     <p>{job.description}</p>
                     <div className="instructions">
                       <p>Please email your resume to <a href={`mailto:info@theslipbar.com?subject=Applying for job ID ${job.id}`}>info@theslipbar.com</a> with "Job ID {job.id}" in the Subject field</p>
                     </div>
                   </div>
-                ) : (
-                  <button className="details-button">Details</button>
                 )}
               </div>
             </div>
