@@ -11,7 +11,7 @@ const SLIDER_IMAGES = [
   },
   {
     link:
-      "./img/full.jpeg",
+      "/img/full.jpeg",
       title: "From the Beach to the 'Burbs",
       description: "Explore our offerings in the South Bay",
       buttonTextRedondo: "Redondo Beach",
@@ -22,7 +22,7 @@ const SLIDER_IMAGES = [
 
   {
     link:
-      "./img/randy.png",
+      "/img/fullglass.jpeg",
       title: "From the Beach to the 'Burbs",
       description: "Explore our offerings in the South Bay",
       buttonTextRedondo: "Redondo Beach",
@@ -32,7 +32,7 @@ const SLIDER_IMAGES = [
   },
   {
     link:
-      "./img/beer.jpeg",
+      "/img/beer.jpeg",
       title: "From the Beach to the 'Burbs",
       description: "Explore our offerings in the South Bay",
       buttonTextRedondo: "Redondo Beach",

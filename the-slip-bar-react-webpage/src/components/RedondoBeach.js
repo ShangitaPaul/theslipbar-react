@@ -4,7 +4,7 @@ import { Container, Row, Col, Nav } from "react-bootstrap";
 import redondoBeachCarouselImages from "../data/redondoBeachCarouselImages";
 import redondoBeachMenu1 from "../img/redondomenupage1.png";
 import redondoBeachMenu2 from "../img/redondomenupage1.jpg";
-import "./RedondoBeach.css";
+import "../styles/RedondoBeach.css";
 
 const RedondoBeach = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,19 +30,28 @@ const RedondoBeach = () => {
       <h4>Redondo Beach</h4>
 
       {/* Navigation Menu */}
-      <Nav defaultActiveKey="#contact" className="justify-content-center custom-nav">
+      <Nav
+        defaultActiveKey="#contact"
+        className="justify-content-center custom-nav"
+      >
         <Nav.Item>
-          <Nav.Link href="#contact" className="custom-link">Contact</Nav.Link>
+          <Nav.Link href="#contact" className="custom-link">
+            Contact
+          </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#menu" className="custom-link">Menu</Nav.Link>
+          <Nav.Link href="#menu" className="custom-link">
+            Menu
+          </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#events" className="custom-link">Events</Nav.Link>
+          <Nav.Link href="#events" className="custom-link">
+            Events
+          </Nav.Link>
         </Nav.Item>
       </Nav>
-      
-      <div className='af-height-90 af-max-width mx-auto mt-2 position-relative'>
+
+      <div className="af-height-90 af-max-width mx-auto mt-2 position-relative">
         <Carousel
           activeIndex={currentIndex}
           onSelect={(index) => setCurrentIndex(index)}
@@ -50,7 +59,11 @@ const RedondoBeach = () => {
         >
           {redondoBeachCarouselImages.map((slide, index) => (
             <Carousel.Item key={index}>
-              <img className="d-block w-100" src={slide.link} alt={slide.title} />
+              <img
+                className="d-block w-100"
+                src={slide.link}
+                alt={slide.title}
+              />
               <div className="carousel-caption position-absolute">
                 <div className="af-position-lg af-bg-dark-transparent py-5">
                   <h3>{slide.title}</h3>
@@ -62,7 +75,7 @@ const RedondoBeach = () => {
         </Carousel>
       </div>
 
-      <Container className="py-7" id="contact">
+      <Container className="contact">
         <h5>Contact</h5>
         <Row>
           <Col md={4}>
@@ -75,12 +88,20 @@ const RedondoBeach = () => {
             <h2>Address</h2>
             <p>120 N International Boardwalk</p>
             <p>Redondo Beach, CA 90277</p>
-            <a href="https://www.google.com/maps/dir//120+N+International+Boardwalk+Redondo+Beach,+CA+90277" rel="noreferrer">Get Directions</a>
+            <a
+              href="https://www.google.com/maps/dir//120+N+International+Boardwalk+Redondo+Beach,+CA+90277"
+              rel="noreferrer"
+            >
+              Get Directions
+            </a>
           </Col>
           <Col md={4}>
             <h2>Contact Information</h2>
             <p>Phone: (310) 921-8940</p>
-            <p>Email: <a href="mailto:info@theslipbar.com">info@theslipbar.com</a></p>
+            <p>
+              Email:{" "}
+              <a href="mailto:info@theslipbar.com">info@theslipbar.com</a>
+            </p>
           </Col>
         </Row>
       </Container>
@@ -115,7 +136,7 @@ const RedondoBeach = () => {
         </Row>
       </Container>
 
-      <Container className="py-7" id="events">
+      <Container className="events">
         <h5>Events</h5>
         <div
           data-tockify-component="calendar"

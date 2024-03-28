@@ -4,7 +4,7 @@ import { Container, Row, Col, Nav } from "react-bootstrap";
 import lomitaCarouselImages from "../data/lomitaCarouselImages";
 import lomitaMenu1 from "../img/lomitamenupage2.jpg";
 import lomitaMenu2 from "../img/lomitamenupage1.jpg"; // Corrected file extension
-import "./Lomita.css";
+import "../styles/Lomita.css";
 
 const Lomita = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,7 +62,7 @@ const Lomita = () => {
         </Carousel>
       </div>
 
-      <Container className="py-7" id="contact">
+      <Container className="contact">
         <h5>Contact</h5>
         <Row>
           <Col md={4}>
@@ -84,8 +84,12 @@ const Lomita = () => {
         </Row>
       </Container>
 
+
+
+
       <Container id="menu">
         <h5>Menu</h5>
+
         <Row>
           <Col md={12}>
             {lomitaMenu1 && (
@@ -113,9 +117,11 @@ const Lomita = () => {
           </Col>
         </Row>
       </Container>
+     
 
-      <Container className="py-7" id="events">
+      <Container className="events">
         <h5>Events</h5>
+   
         <div
           data-tockify-component="calendar"
           data-tockify-calendar="theslipbar"

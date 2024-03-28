@@ -1,6 +1,6 @@
 const lomitaCarouselImages = [
   {
-    link: "/img/homepage.png",
+    link: "/img/randy.png",
     title: "Lomita",
     description: "Neighborhood bar with a great atmosphere",
   },

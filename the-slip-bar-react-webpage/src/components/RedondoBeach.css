@@ -14,7 +14,9 @@ body {
   font-size: 1.5rem;
   margin: 0;
   color: black;
+
 }
+
 
 
 p {
@@ -51,7 +53,32 @@ h5 {
   font-style: normal;
   font-size: 2.5rem;
   margin: 20px 0; /* Increased margin for more space */
+  margin-top: 100px;
+  
 }
+
+h5 {
+  position: relative;
+}
+
+h5::before,
+h5::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%; /* Adjust line length */
+  height: 1px; /* Adjust line thickness */
+  background-color: #0d4d8d
+}
+
+h5::before {
+  left: 0;
+}
+
+h5::after {
+  right: 0;
+}
+
 
 h6 {
   font-family: "advent pro", sans-serif;
@@ -103,12 +130,5 @@ h3 {
 
 /* Your existing CSS styles */
 
-/* Media query for small screens */
-@media screen and (max-width: 576px) {
-  /* Add your styles for small screens here */
-  .RedondoBeach img {
-    width: 200%; /* Make the image fill the width of the container */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0; /* Reset margin */
-  }
-}
+
+

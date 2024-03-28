@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import './Contact.css';
+import "../styles/Contact.css";
 
 const Contact = () => {
   const socialMediaStyle = { color: '#0d4d9d' }; // Custom style for social media icons and text

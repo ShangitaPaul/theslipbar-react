@@ -1,21 +1,15 @@
 // JobList.js
-
 import React from 'react';
+import JobListItem from './JobListItem';
 
-const JobList = ({ jobs, handleJobClick }) => {
+const JobList = ({ jobs, expandedJob, toggleJobDetails }) => {
   return (
-    <div>
-      <h2>Available Jobs</h2>
-      <ul>
-        {jobs.map(job => (
-          <li key={job.id} onClick={() => handleJobClick(job.id)}>
-            {job.title}
-          </li>
-        ))}
-      </ul>
+    <div className="jobs-container">
+      {jobs.map(job => (
+        <JobListItem key={job.id} job={job} expanded={expandedJob === job.id} toggleDetails={toggleJobDetails} />
+      ))}
     </div>
   );
 };
 
 export default JobList;
-
