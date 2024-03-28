@@ -1,0 +1,21 @@
+/* Default styles */
+.logo {
+    width: 35%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 768px) {
+    .logo {
+      width: 30%;
+    }
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 576px) {
+    .logo {
+      width: 80%;
+    }
+  }
+  

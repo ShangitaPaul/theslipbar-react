@@ -41,12 +41,6 @@
   color: #000 !important;
 }
 
-.carousel-container {
-  position: absolute;
-  width: 100%;
-  height: auto;
-}
-
 .carousel-caption {
   font-size: 1.5em;
   width: 100%;
@@ -75,8 +69,11 @@
 }
 
 .carousel-indicators {
-  display: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1px;
 }
+
 
 /* Media query for screens with a maximum width of 576px */
 @media (max-width: 576px) {
@@ -136,12 +133,9 @@
     margin-top: 1px;
   }
 
-
-  
-  .carousel-indicators {
-    display: none;
-  }
 }
+
+
 
 /* End of snippet from the-slip-bar-react-webpage/src/styles/Home.css */
 
