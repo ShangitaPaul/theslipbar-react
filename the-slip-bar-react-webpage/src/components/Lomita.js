@@ -4,6 +4,7 @@ import { Container, Row, Col, Nav } from "react-bootstrap";
 import lomitaCarouselImages from "../data/lomitaCarouselImages";
 import lomitaMenu1 from "../menus/lomitamenupage2.jpg";
 import lomitaMenu2 from "../menus/lomitamenupage1.jpg"; // Corrected file extension
+import lomitaMap from "../maps/lomitamap.png"; // Corrected file path
 import "../styles/Lomita.css";
 
 const Lomita = () => {
@@ -30,27 +31,40 @@ const Lomita = () => {
       <h4>Lomita</h4>
 
       {/* Navigation Menu */}
-      <Nav defaultActiveKey="#contact" className="justify-content-center custom-nav">
+      <Nav
+        defaultActiveKey="#contact"
+        className="justify-content-center custom-nav"
+      >
         <Nav.Item>
-          <Nav.Link href="#contact" className="custom-link">Contact</Nav.Link>
+          <Nav.Link href="#contact" className="custom-link">
+            Contact
+          </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#menu" className="custom-link">Menu</Nav.Link>
+          <Nav.Link href="#menu" className="custom-link">
+            Menu
+          </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#events" className="custom-link">Events</Nav.Link>
+          <Nav.Link href="#events" className="custom-link">
+            Events
+          </Nav.Link>
         </Nav.Item>
       </Nav>
 
-      <div className='af-height-90 af-max-width mx-auto mt-2 position-relative'>
+      <div className="af-height-90 af-max-width mx-auto mt-2 position-relative">
         <Carousel
           activeIndex={currentIndex}
           onSelect={(index) => setCurrentIndex(index)}
-          interval={2000} // Set interval to 2 seconds for faster scrolling
+          interval={3000} // Set interval to 2 seconds for faster scrolling
         >
           {lomitaCarouselImages.map((slide, index) => (
             <Carousel.Item key={index}>
-              <img className="d-block w-100" src={slide.link} alt={slide.title} />
+              <img
+                className="d-block w-100"
+                src={slide.link}
+                alt={slide.title}
+              />
               <div className="carousel-caption position-absolute">
                 <div className="af-position-lg af-bg-dark-transparent py-5">
                   <h3>{slide.title}</h3>
@@ -62,30 +76,53 @@ const Lomita = () => {
         </Carousel>
       </div>
 
-      <Container className="contact">
+      <Container id="contact">
         <h5>Contact</h5>
         <Row>
           <Col md={4}>
             <h2>Hours of Operation</h2>
-            <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
-            <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
-            <p>Sunday: 10:00 AM - 9:00 PM</p>
+            <p> Opens 4PM Monday-Wednesday</p>
+            <p> Opens Noon Friday-Saturday </p>
+            <p> Opens 10AM on Sundays</p>
           </Col>
           <Col md={4}>
             <h2>Address</h2>
             <p>24503 Narbonne Ave, Lomita, CA 90717</p>
-            <a href="https://www.google.com/maps/dir//24503+Narbonne+Ave.+Lomita,+CA+90717" rel="noreferrer">Get Directions</a>
+            <a
+              href="https://www.google.com/maps/dir//24503+Narbonne+Ave.+Lomita,+CA+90717"
+              rel="noreferrer"
+            >
+              Get Directions
+            </a>
           </Col>
           <Col md={4}>
             <h2>Contact Information</h2>
             <p>Phone: (424) 376-6947</p>
-            <p>Email: <a href="mailto:info@theslipbar.com">info@theslipbar.com</a></p>
+            <p>
+              Email:{" "}
+              <a href="mailto:info@theslipbar.com">info@theslipbar.com</a>
+            </p>
           </Col>
         </Row>
+        <br>
+        </br>
+   
+        <Col md={12}>
+        <h2>Parking</h2>
+          <p>
+            Parking is available in the lot across the bar.
+            </p>
+          {lomitaMap && (
+            <img
+              src={lomitaMap}
+              alt="Lomita Map"
+              className="img-fluid"
+              style={{ maxWidth: "100%", border: "1px #0d4d8d solid"}}
+              onError={(e) => console.error("Error loading map image:", e)}
+            />
+          )}
+        </Col>
       </Container>
-
-
-
 
       <Container id="menu">
         <h5>Menu</h5>
@@ -117,11 +154,10 @@ const Lomita = () => {
           </Col>
         </Row>
       </Container>
-     
 
-      <Container className="events">
+      <Container id="events">
         <h5>Events</h5>
-   
+
         <div
           data-tockify-component="calendar"
           data-tockify-calendar="theslipbar"

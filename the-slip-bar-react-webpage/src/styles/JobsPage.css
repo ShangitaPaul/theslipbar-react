@@ -1,21 +1,40 @@
-/* JobsPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 .jobs-page {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
   max-width: 800px;
   margin: 20px auto; /* Set margins */
   padding: 20px; /* Set padding */
+  font-size: 1.2rem;
+}
+
+#locationFilter {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 600;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .page-title {
+  font-size: 2rem;
+  font-family: "Pacifico", cursive;
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 50px, 0; /* Adjust top margin */
+  margin-bottom: 50px; /* Add bottom margin */
+
 }
 
 .filter-section {
-  margin-bottom: 20px;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 50px;
 }
 
 .job-card {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
@@ -24,19 +43,24 @@
 }
 
 .job-card:hover {
-  border-color: #999;
+  border-color: #0d4d8d; /* Change border color on hover */
+  cursor: pointer;
 }
 
 .job-header {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .job-header-content {
+  font-family: "Poiret One", sans-serif;
   display: flex;
   flex-direction: column; /* Stack items vertically */
 }
 
 .job-details {
+  font-family:'Poiret One', sans-serif;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
@@ -49,23 +73,30 @@
 }
 
 .job-details p {
+  font-family: "thasadith", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
 .expanded .job-details {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 700;
   max-height: 1000px; /* Set to a large enough value to allow for expansion */
 }
 
 /* JobsPage.css */
 
 .details-button {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 700;
   cursor: pointer;
   background-color: #0d4d8d; /* Button background color */
   color: #fff; /* Text color */
   border: none;
   border-radius: none;
   padding: 10px 16px; /* Adjust padding */
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: background-color 0.3s;
   margin-top: 20px; /* Adjust margin as needed */
   margin-bottom: 20px; /* Add margin */

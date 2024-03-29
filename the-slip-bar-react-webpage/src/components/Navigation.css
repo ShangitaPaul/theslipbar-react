@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+.navbar {
+  font-family: "poiret one", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color: #0d4d8d;
+  color: #fff;
+  padding: 0;
+}
 .navbar-brand img {
   width: 270px;
   height: auto;
@@ -17,6 +31,9 @@
 }
 
 .NavDropdown.Item {
+  font-family: "poiret one", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
   align-items: center;
     display: flex;
     justify-content: center;
@@ -26,6 +43,9 @@
 }
 
 .NavDropdown.Item a {
+  font-family: "poiret one", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
   align-items: center;
     display: flex;
     justify-content: center;
@@ -40,6 +60,9 @@
 
 /* Navigation.css */
 .custom-dropdown .dropdown-menu {
+  font-family: "poiret one", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
   text-align: center; /* Center the dropdown content */
 }
 

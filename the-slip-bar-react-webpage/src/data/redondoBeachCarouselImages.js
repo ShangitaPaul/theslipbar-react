@@ -12,7 +12,7 @@ const redondoBeachCarouselImages = [
   {
     link: "/img/likezep.jpg",
     title: "Live Music",
-    description: "Check out our live music schedule",
+    description: "Check out our live music lineup in the 'Events' section",
   },
 ];
 

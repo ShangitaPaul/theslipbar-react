@@ -1,21 +1,39 @@
-/* Default styles */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
+body {
+
+  background-color: #f9f9f9;
+  color: black;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: "Poiret One", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
 .logo {
-    width: 35%;
-    height: auto;
-    margin-top: 20px;
+  width: 35%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .logo {
+    width: 30%;
   }
-  
-  /* Desktop styles */
-  @media (min-width: 768px) {
-    .logo {
-      width: 30%;
-    }
+}
+
+/* Mobile styles */
+@media (max-width: 576px) {
+  .logo {
+    width: 80%;
   }
-  
-  /* Mobile styles */
-  @media (max-width: 576px) {
-    .logo {
-      width: 80%;
-    }
-  }
+}
   
