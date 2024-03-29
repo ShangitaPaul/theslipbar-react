@@ -20,9 +20,9 @@ class Footer extends Component {
           <div className='text-light text-center py-0'>
             <p>© 2024 The Slip Bar & Eatery. All Rights Reserved.</p>
             <p>Website by:{' '}
-              <a href='https://instagram.com/sangitasurfs' target='_blank' rel='noreferrer' style={{ color: "#fff", textDecoration: "none", fontWeight: "normal", transition: "text-decoration 0.3s" }}>
+              <a href='https://instagram.com/sangitasurfs' target='_blank' rel='noreferrer' style={{ color: "#fff", textDecoration: "none", transition: "text-decoration 0.3s" }}>
                 <span onMouseOver={(e) => e.target.style.textDecoration = 'underline'} onMouseOut={(e) => e.target.style.textDecoration = 'none'}>
-                  Shangita Paul Engineering
+                  Shangita Paul Media
                 </span>
               </a>
             </p>

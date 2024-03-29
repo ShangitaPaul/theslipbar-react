@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Poiret+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 .button-container {
-  font-size: "poiret one", sans-serif;
-  font-weight: 500;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +15,8 @@
 }
 
 .button-container .btn {
-  font-family: "poiret one", sans-serif;
-  font-weight: 700;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
   margin: 5px 0;
   border-radius: 0;
 }
@@ -53,17 +53,17 @@
 }
 
 .carousel-caption h3 {
-  font-family: "poiret one", sans-serif;
-  font-weight: 700;
-  font-size: 2.2rem;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
   margin: -5px;
   margin-top: -10px;
   padding: 0;
 }
 
 .carousel-caption p {
-  font-family: "poiret one", sans-serif;
-  font-weight: 600;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
   font-size: 1.4rem;
   margin: 0;
   padding: 0;
