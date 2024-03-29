@@ -4,6 +4,7 @@ import { Container, Row, Col, Nav } from "react-bootstrap";
 import lomitaCarouselImages from "../data/lomitaCarouselImages";
 import lomitaMenu1 from "../menus/lomitamenupage2.jpg";
 import lomitaMenu2 from "../menus/lomitamenupage1.jpg"; // Corrected file extension
+import lomitaMap from "../maps/lomitamap.png"; // Corrected file path
 import "../styles/Lomita.css";
 
 const Lomita = () => {
@@ -80,9 +81,9 @@ const Lomita = () => {
         <Row>
           <Col md={4}>
             <h2>Hours of Operation</h2>
-            <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
-            <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
-            <p>Sunday: 10:00 AM - 9:00 PM</p>
+            <p> Opens 4PM Monday-Wednesday</p>
+            <p> Opens Noon Friday-Saturday </p>
+            <p> Opens 10AM on Sundays</p>
           </Col>
           <Col md={4}>
             <h2>Address</h2>
@@ -103,6 +104,24 @@ const Lomita = () => {
             </p>
           </Col>
         </Row>
+        <br>
+        </br>
+   
+        <Col md={12}>
+        <h2>Parking</h2>
+          <p>
+            Parking is available in the lot across the bar.
+            </p>
+          {lomitaMap && (
+            <img
+              src={lomitaMap}
+              alt="Lomita Map"
+              className="img-fluid"
+              style={{ maxWidth: "100%", border: "1px #0d4d8d solid"}}
+              onError={(e) => console.error("Error loading map image:", e)}
+            />
+          )}
+        </Col>
       </Container>
 
       <Container id="menu">

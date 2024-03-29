@@ -5,11 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unlock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* Apply Montserrat font to elements */
 
 
 body {
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "poiret one", sans-serif;
+  font-weight: 700;
   text-align: center;
   font-size: 1.5rem;
   margin: 0;
@@ -20,11 +22,10 @@ body {
 
 
 p {
-  font-family: "Advent Pro", sans-serif;
-  font-size: 1.5rem;
+  font-family: "Thasadith", sans-serif;
+  font-size: 1.2rem;
   margin: 5px 0;
 }
-
 
 h1 {
   font-family: "Pacifico", cursive;
@@ -34,8 +35,8 @@ h1 {
 }
 
 h2 {
-  font-family: "Advent Pro", sans-serif;
-  font-size: 30px;
+  font-family: "thasadith", sans-serif;
+  font-size: 1.8rem;
   font-weight: 300;
   margin: 5px 0;
 }
@@ -118,6 +119,8 @@ h3 {
 }
 
 .custom-nav .custom-link {
+  font-family: "poiret one", sans-serif;
+  font-size: 2rem;
   color: #0d4d8d; /* Set link color */
   text-decoration: none; /* Remove underline */
   padding: 10px 15px; /* Add padding */
@@ -127,4 +130,8 @@ h3 {
   color: #333; /* Change color on hover */
   background-color: transparent; /* Remove background color on hover */
 }
+
+/* Your existing CSS styles */
+
+
 
