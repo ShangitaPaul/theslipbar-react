@@ -40,6 +40,7 @@
 
 /* Navigation.css */
 .custom-dropdown .dropdown-menu {
+  font-size: 1.2rem;
   text-align: center; /* Center the dropdown content */
 }
 

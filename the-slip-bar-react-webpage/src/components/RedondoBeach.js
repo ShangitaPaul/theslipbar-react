@@ -55,7 +55,7 @@ const RedondoBeach = () => {
         <Carousel
           activeIndex={currentIndex}
           onSelect={(index) => setCurrentIndex(index)}
-          interval={2000} // Set interval to 2 seconds for faster scrolling
+          interval={3000} // Set interval to 2 seconds for faster scrolling
         >
           {redondoBeachCarouselImages.map((slide, index) => (
             <Carousel.Item key={index}>
@@ -75,7 +75,7 @@ const RedondoBeach = () => {
         </Carousel>
       </div>
 
-      <Container className id="contact">
+      <Container id="contact">
         <h5>Contact</h5>
         <Row>
           <Col md={4}>
@@ -136,7 +136,7 @@ const RedondoBeach = () => {
         </Row>
       </Container>
 
-      <Container className id="events">
+      <Container id="events">
         <h5>Events</h5>
         <div
           data-tockify-component="calendar"

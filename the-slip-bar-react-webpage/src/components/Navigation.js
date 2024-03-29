@@ -30,12 +30,12 @@ function Navigation() {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <NavDropdown title="Locations" id="locations-dropdown" className="custom-dropdown justify-content-center">
-              <NavDropdown.Item as={Link} to="redondo-beach">Redondo Beach</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="lomita">Lomita</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/redondo-beach">Redondo Beach</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/lomita">Lomita</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Events" id="events-dropdown" className="custom-dropdown justify-content-center">
-              <NavDropdown.Item as={Link} to="/redondo-beach/events">Redondo Beach Events</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/lomita/events">Lomita Events</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/redondo-beach#events">Redondo Beach Events</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/lomita#events">Lomita Events</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/merch">Merch</Nav.Link>
             <Nav.Link as={Link} to="/jobs">Jobs</Nav.Link>

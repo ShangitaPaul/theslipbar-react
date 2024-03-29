@@ -6,13 +6,22 @@
   padding: 20px; /* Set padding */
 }
 
+#locationFilter {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
 .page-title {
+  font-size: 2rem;
+  font-family: "Pacifico", cursive;
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 50px, 0; /* Adjust top margin */
+  margin-bottom: 50px; /* Add bottom margin */
+
 }
 
 .filter-section {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .job-card {

@@ -40,7 +40,7 @@ function JobsPage() {
 
   return (
     <div className="jobs-page">
-      <h1 className="page-title">Come Join Us!</h1>
+      <h7 className="page-title">Come Join Us!</h7>
       <div className="filter-section">
         <label htmlFor="locationFilter">Filter by Location</label>
         <select id="locationFilter" value={locationFilter} onChange={e => setLocationFilter(e.target.value)}>

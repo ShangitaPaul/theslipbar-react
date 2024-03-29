@@ -26,11 +26,10 @@ p {
 }
 
 h1 {
-  font-family: "advent pro", sans-serif;
+  font-family: "Pacifico", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
-  margin: 5px 0;
 }
 
 h2 {
@@ -81,11 +80,11 @@ h5::after {
 
 
 h6 {
-  font-family: "advent pro", sans-serif;
+  font-family: "Pacifico", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 
 h3 {
