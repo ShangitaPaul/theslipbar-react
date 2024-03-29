@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import lomitaCarouselImages from "../data/lomitaCarouselImages";
-import lomitaMenu1 from "../img/lomitamenupage2.jpg";
-import lomitaMenu2 from "../img/lomitamenupage1.jpg"; // Corrected file extension
+import lomitaMenu1 from "../menus/lomitamenupage2.jpg";
+import lomitaMenu2 from "../menus/lomitamenupage1.jpg"; // Corrected file extension
 import "../styles/Lomita.css";
 
 const Lomita = () => {

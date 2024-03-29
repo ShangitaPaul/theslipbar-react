@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import redondoBeachCarouselImages from "../data/redondoBeachCarouselImages";
-import redondoBeachMenu1 from "../img/redondomenupage1.png";
-import redondoBeachMenu2 from "../img/redondomenupage1.jpg";
+import redondoBeachMenu1 from "../menus/redondomenupage1.png";
+import redondoBeachMenu2 from "../menus/redondomenupage1.jpg";
 import "../styles/RedondoBeach.css";
 
 const RedondoBeach = () => {
