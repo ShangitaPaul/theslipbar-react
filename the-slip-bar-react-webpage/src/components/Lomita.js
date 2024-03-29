@@ -62,7 +62,7 @@ const Lomita = () => {
         </Carousel>
       </div>
 
-      <Container className="contact">
+      <Container className id="contact">
         <h5>Contact</h5>
         <Row>
           <Col md={4}>
@@ -119,7 +119,7 @@ const Lomita = () => {
       </Container>
      
 
-      <Container className="events">
+      <Container className id="events">
         <h5>Events</h5>
    
         <div

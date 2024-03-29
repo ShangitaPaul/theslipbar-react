@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import redondoBeachCarouselImages from "../data/redondoBeachCarouselImages";
-import redondoBeachMenu1 from "../menus/redondomenupage1.png";
+import redondoBeachMenu1 from "../menus/redondomenupage2.jpg";
 import redondoBeachMenu2 from "../menus/redondomenupage1.jpg";
 import "../styles/RedondoBeach.css";
 
@@ -75,7 +75,7 @@ const RedondoBeach = () => {
         </Carousel>
       </div>
 
-      <Container className="contact">
+      <Container className id="contact">
         <h5>Contact</h5>
         <Row>
           <Col md={4}>
@@ -136,7 +136,7 @@ const RedondoBeach = () => {
         </Row>
       </Container>
 
-      <Container className="events">
+      <Container className id="events">
         <h5>Events</h5>
         <div
           data-tockify-component="calendar"

@@ -23,6 +23,7 @@ function Navigation() {
           />
       
         </Navbar.Brand>
+        
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
         <Navbar.Collapse id="basic-navbar-nav" expanded={expanded} onToggle={handleToggle}>
           <Nav className="me-auto">
