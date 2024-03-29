@@ -1,0 +1,83 @@
+/* JobsPage.css */
+
+.jobs-page {
+  max-width: 800px;
+  margin: 20px auto; /* Set margins */
+  padding: 20px; /* Set padding */
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.job-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px; /* Add space between cards */
+  transition: border-color 0.3s;
+}
+
+.job-card:hover {
+  border-color: #999;
+}
+
+.job-header {
+  margin-bottom: 10px;
+}
+
+.job-header-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
+
+.job-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 80%; /* Adjust width as needed */
+  margin: auto; /* Center details horizontally */
+}
+
+.job-details p {
+  margin-bottom: 10px;
+}
+
+.expanded .job-details {
+  max-height: 1000px; /* Set to a large enough value to allow for expansion */
+}
+
+/* JobsPage.css */
+
+.details-button {
+  cursor: pointer;
+  background-color: #0d4d8d; /* Button background color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: none;
+  padding: 10px 16px; /* Adjust padding */
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+  margin-top: 20px; /* Adjust margin as needed */
+  margin-bottom: 20px; /* Add margin */
+  width: 30%; /* Adjust width */
+  margin-left: 35%; /* Center button horizontally */
+}
+
+.details-button:hover {
+  background-color: #0056b3; /* Hover background color */
+}
+
+.details-button:focus {
+  outline: none; /* Remove focus outline */
+}
+
