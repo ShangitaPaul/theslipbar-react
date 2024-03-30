@@ -48,7 +48,7 @@ function JobsPage() {
         </select>
       </div>
       <JobList jobs={filteredJobs} expandedJob={expandedJob} toggleJobDetails={toggleJobDetails} />
-      {expandedJob !== null && (
+      {expandedJob && (
         <div className="details-button-container">
           <button className="details-button" onClick={() => setExpandedJob(null)}>
             Close Details
