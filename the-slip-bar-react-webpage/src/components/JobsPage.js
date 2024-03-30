@@ -8,7 +8,6 @@ function JobsPage() {
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [locationFilter, setLocationFilter] = useState('');
-  // Store only the expanded job ID, not the entire job object
   const [expandedJobId, setExpandedJobId] = useState(null);
 
   useEffect(() => {
@@ -25,24 +24,30 @@ function JobsPage() {
     fetchJobs();
   }, []);
 
-  // ... other code remains the same ...
-
   const toggleJobDetails = (jobId) => {
-    setExpandedJobId(jobId);
+    setExpandedJobId((prevJobId) => (prevJobId === jobId ? null : jobId));
   };
 
   return (
-    // ... other code remains the same ...
-    {expandedJobId && (
-      <div className="details-button-container">
-        <button className="details-button" onClick={() => setExpandedJobId(null)}>
-          Close Details
-        </button>
+    <div className="jobs-page">
+      <h2 className="page-title">Come Join Us!</h2>
+      <div className="filter-section">
+        <select id="locationFilter" value={locationFilter} onChange={(e) => setLocationFilter(e.target.value)}>
+          <option value="">All Locations</option>
+          <option value="Lomita">Lomita</option>
+          <option value="Redondo Beach">Redondo Beach</option>
+        </select>
       </div>
-    )}
-    {expandedJobId && (
-      <JobDetail job={jobs.find((job) => job.id === expandedJobId)} />
-    )}
+      <JobList jobs={filteredJobs} expandedJobId={expandedJobId} toggleJobDetails={toggleJobDetails} />
+      {expandedJobId && (
+        <div className="details-button-container">
+          <button className="details-button" onClick={() => setExpandedJobId(null)}>
+            Close Details
+          </button>
+          <JobDetail job={jobs.find((job) => job.id === expandedJobId)} />
+        </div>
+      )}
+    </div>
   );
 }
 
