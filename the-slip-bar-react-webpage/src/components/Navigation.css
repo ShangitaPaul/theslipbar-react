@@ -27,8 +27,13 @@
 
 .navbar-brand {
   padding: 0;
-  margin-bottom: 1%;
+  margin-bottom: .5%;
 
+}
+
+.navbar-toggler {
+  border: none;
+  margin-bottom: .5%;
 }
 
 .NavDropdown.Item {

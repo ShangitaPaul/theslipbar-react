@@ -137,8 +137,39 @@ h3 {
   color: #333; /* Change color on hover */
   background-color: transparent; /* Remove background color on hover */
 }
+@media (max-width: 576px) {
+  .carousel-caption {
+    font-size: 100%;
+  }
 
-/* Your existing CSS styles */
+  .carousel-caption h3 {
+    font-size: 1.5rem;
+  }
 
+  .carousel-caption p {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 1rem;
+  }
+
+  .carousel-caption .btn:hover {
+    background-color: #0056b3;
+  }
+
+  .carousel-caption .btn:focus {
+    outline: none;
+  }
+
+  .carousel-caption .btn {
+    width: 100%;
+  }
+
+  .nav-link .custom-link {
+    font-size: 1.5rem;
+  }
+  
+}
 
 

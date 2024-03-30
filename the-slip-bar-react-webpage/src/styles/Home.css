@@ -79,11 +79,11 @@
 
 @media (max-width: 576px) {
   .carousel-caption {
-    font-size: 90%;
+    font-size: 100%;
   }
 
   .carousel-caption h3 {
-    font-size: 90%;
+    font-size: 95%;
   }
 
   .carousel-caption p {
