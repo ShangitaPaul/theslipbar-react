@@ -40,14 +40,17 @@
 
 
 .page-title {
-  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
   font-family: "Pacifico", cursive;
+  font-size: 3rem;
   text-align: center;
-  margin-top: 50px, 0; /* Adjust top margin */
-  margin-bottom: 50px; /* Add bottom margin */
+  color: #333;
+  margin-bottom: 50px;
 
 }
 
+h
 .filter-section {
   font-family: "Urbanist", sans-serif;
   font-size: 1.5rem;
@@ -147,78 +150,4 @@
 
 }
 
-
-@media (max-width: 576px) {
-  .job-details {
-    width: 90%; /* Adjust width for smaller screens */
-  }
-
-  .details-button {
-    width: 60%; /* Adjust width for smaller screens */
-  }
-
-  .page-title {
-    font-size: 2rem; /* Adjust font size for smaller screens */
-  }
-
-  .filter-section {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
-  }
-
-  .job-card {
-    padding: 10px; /* Adjust padding for smaller screens */
-  }
-
-  .job-header {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-
-  .job-details p {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-
-  .details-button {
-    padding: 8px 12px; /* Adjust padding for smaller screens */
-  }
-
-  .details-button .btn {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-
-  .page-title {
-    font-size: 2rem; /* Adjust font size for smaller screens */
-  }
-
-  .filter-section {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
-  }
-
-  .job-card {
-    padding: 10px; /* Adjust padding for smaller screens */
-  }
-
-  .job-header {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-
-  .job-details p {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-
-  .details-button {
-    padding: 8px 12px; /* Adjust padding for smaller screens */
-  }
-
-  .details-button .btn {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-
-  .button-container .btn {
-    font-size: 90%; /* Adjust font size for smaller screens */
-  }
-
-  .button-container .btn:hover {
-    font-size: 90%; /* Adjust font size for smaller screens */
-  }
-}
 

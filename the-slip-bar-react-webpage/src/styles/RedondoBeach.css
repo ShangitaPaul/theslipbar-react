@@ -141,4 +141,10 @@ h3 {
 /* Your existing CSS styles */
 
 
+@media (max-width: 576px) {
 
+  h5 ::before,
+  h5 ::after {
+    width: 20%;
+  }
+}
