@@ -12,7 +12,7 @@ const lomitaCarouselImages = [
   {
     link: "/img/lomita-patio.jpeg",
     title: "Outdoor Patio",
-    description: "Enjoy the South Bay weather on our outdoor patio",
+    description: "Enjoy the South Bay weather",
   },
 ];
 
