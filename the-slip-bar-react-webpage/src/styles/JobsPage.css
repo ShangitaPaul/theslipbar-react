@@ -1,62 +1,61 @@
 /* JobsPage.css */
 
-.job-card {
-  background-color: #f8f9fa; /* Set background color */
-  border: 1px solid #0d4d8d; /* Add border */
-  border-radius: 0.25rem; /* Add border radius for rounded corners */
-  padding: 1rem; /* Add padding */
-  margin-bottom: 1rem; /* Add margin between cards */
-}
-
-.job-title {
-  font-size: 1.25rem; /* Set font size for job title */
-  font-weight: bold; /* Set font weight for job title */
-  margin-bottom: 0.5rem; /* Add margin bottom */
+.jobs-page {
+  padding: 20px;
 }
 
 .page-title {
-  font-family: "Pacifico", cursive; /* Set font family for page title */
-  font-size: 3rem; /* Set font size for page title */
-  font-weight: 400; /* Set font weight for page title */
-  margin-top: 50px; /* Add margin top */
-  margin-bottom: 50px; /* Add margin bottom */
-  text-align: center; /* Center align text */
-  
+  margin-bottom: 20px;
 }
 
-.job-location {
-  font-size: 1rem; /* Set font size for job location */
-  color: #6c757d; /* Set color for job location */
-  margin-bottom: 0.5rem; /* Add margin bottom */
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Style for the job cards */
+.job-card {
+  background-color: #fff;
+  border: 1px solid #0d4d8d;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.job-title {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .job-description {
-  font-size: 1rem; /* Set font size for job description */
-  margin-bottom: 0.5rem; /* Add margin bottom */
+  margin-bottom: 10px;
 }
 
-/* Additional CSS to remove bullet points */
-.job-description ul {
-  list-style-type: none; /* Remove bullet points from unordered lists */
-  padding-left: 0; /* Remove default padding */
+.job-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.job-description ul li {
-  margin-bottom: 0.5rem; /* Add margin between list items */
+/* Style for the show details button */
+.details-button {
+  background-color: #0d4d8d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+  border-radius: 0;
 }
 
-/* JobsPage.css */
-
-.show-details-button {
-  background-color: #0d4d8d; /* Background color */
-  color: #fff; /* Text color */
-  border: none; /* Remove border */
-  padding: 0.5rem 1rem; /* Padding for button */
-  border-radius: none; /* Border radius for rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-.show-details-button:hover {
-  background-color: #0a3c78; /* Darker background color on hover */
+.details-button:hover {
+  background-color: #084170;
 }
