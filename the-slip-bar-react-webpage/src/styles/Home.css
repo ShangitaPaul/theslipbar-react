@@ -78,35 +78,26 @@
 
 @media (max-width: 576px) {
   .carousel-caption {
-    font-size: 50%;
+    font-size: 70%;
   }
 
   .carousel-caption h3 {
-    font-size: 50%;
+    font-size: 70%;
   }
 
   .carousel-caption p {
-    font-size: 50%;
+    font-size: 70%;
   }
 
   .button-container .btn {
-    font-size: 50%;
+    font-size: 70%;
   }
 
   .button-container .btn:hover {
-    font-size: 50%;
+    font-size: 70%;
   }
 
   .transparent-btn {
     font-size: 50%;
   }
-
-  .transparent-btn:hover {
-    font-size: 50%;
-  }
-
-  .carousel-indicators {
-    font-size: 50%;
-  }
-
 }
