@@ -8,7 +8,8 @@ function JobsPage() {
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [locationFilter, setLocationFilter] = useState('');
-  const [expandedJobId, setExpandedJobId] = useState(null);
+  const [expandedJob, setExpandedJob] = useState(null);
+
 
   useEffect(() => {
     const fetchJobs = async () => {
