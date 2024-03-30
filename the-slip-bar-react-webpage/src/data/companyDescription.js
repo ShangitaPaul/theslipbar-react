@@ -1,6 +1,5 @@
 const COMPANY_DESCRIPTION = (
     <div>
-        <h1>Our Story</h1>
         <p style={{ fontSize: '1em' }}>
             Whether in the waterfront in Redondo Beach, or in the cozy neighborhood nook of Lomita, we pride ourselves as a friendly local spot specializing in craft and locally brewed beers, spirits, and delicious eats!
         </p>

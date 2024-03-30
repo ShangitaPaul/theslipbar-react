@@ -14,7 +14,7 @@ function JobsPage() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/jobs');
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/jobs`);
         setJobs(response.data);
         setFilteredJobs(response.data);
       } catch (error) {
@@ -42,7 +42,6 @@ function JobsPage() {
     <div className="jobs-page">
       <h7 className="page-title">Come Join Us!</h7>
       <div className="filter-section">
-        <label htmlFor="locationFilter">Filter by Location</label>
         <select id="locationFilter" value={locationFilter} onChange={e => setLocationFilter(e.target.value)}>
           <option value="">All Locations</option>
           <option value="Lomita">Lomita</option>
