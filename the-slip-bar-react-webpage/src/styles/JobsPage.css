@@ -14,6 +14,16 @@
   margin-bottom: 0.5rem; /* Add margin bottom */
 }
 
+.page-title {
+  font-family: "Pacifico", cursive; /* Set font family for page title */
+  font-size: 3rem; /* Set font size for page title */
+  font-weight: 400; /* Set font weight for page title */
+  margin-top: 50px; /* Add margin top */
+  margin-bottom: 50px; /* Add margin bottom */
+  text-align: center; /* Center align text */
+  
+}
+
 .job-location {
   font-size: 1rem; /* Set font size for job location */
   color: #6c757d; /* Set color for job location */
