@@ -1,169 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Poiret+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-.jobs-page {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 400;
-  max-width: 800px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 20px;
-
-
-
-}
-
-/* #locationFilter {
-  display: flex;
-  flex-direction: column;
-  font-family: "Urbanist", sans-serif;
-  font-weight: 400;
-  max-width: 800px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 20px;
-} */
-
-.filter-section {
-  font-family: "Urbanist", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 50px;
-}
-
-
-.page-title {
-  display: flex;
-  flex-direction: column;
-  font-family: "Pacifico", cursive;
-  font-size: 3rem;
-  text-align: center;
-  color: #333;
-  margin-bottom: 50px;
-
-}
-
-h
-.filter-section {
-  font-family: "Urbanist", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 50px;
-}
+/* JobsPage.css */
 
 .job-card {
-  font-family: "Poiret One", sans-serif;
-  font-weight: 400;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px; /* Add space between cards */
-  transition: border-color 0.3s;
+  background-color: #f8f9fa; /* Set background color */
+  border: 1px solid #0d4d8d; /* Add border */
+  border-radius: 0.25rem; /* Add border radius for rounded corners */
+  padding: 1rem; /* Add padding */
+  margin-bottom: 1rem; /* Add margin between cards */
 }
 
-.job-card:hover {
-  border-color: #0d4d8d; /* Change border color on hover */
-  cursor: pointer;
+.job-title {
+  font-size: 1.25rem; /* Set font size for job title */
+  font-weight: bold; /* Set font weight for job title */
+  margin-bottom: 0.5rem; /* Add margin bottom */
 }
 
-.job-header {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 700;
-  margin-bottom: 10px;
+.job-location {
+  font-size: 1rem; /* Set font size for job location */
+  color: #6c757d; /* Set color for job location */
+  margin-bottom: 0.5rem; /* Add margin bottom */
 }
 
-.job-header-content {
-  font-family: "Urbanist", sans-serif;
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
+.job-description {
+  font-size: 1rem; /* Set font size for job description */
+  margin-bottom: 0.5rem; /* Add margin bottom */
 }
 
-.job-details {
-  font-family: "Urbanist", sans-serif;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 80%; /* Adjust width as needed */
-  margin: auto; /* Center details horizontally */
+/* Additional CSS to remove bullet points */
+.job-description ul {
+  list-style-type: none; /* Remove bullet points from unordered lists */
+  padding-left: 0; /* Remove default padding */
 }
 
-.job-details p {
-  font-family: "thasadith", sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.expanded .job-details {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 400;
-  max-height: 1000px; /* Set to a large enough value to allow for expansion */
+.job-description ul li {
+  margin-bottom: 0.5rem; /* Add margin between list items */
 }
 
 /* JobsPage.css */
 
-.details-button {
-  display: block;
-  margin-top: 10px;
-  text-align: center;
-  font-family: "Urbanist", sans-serif;
-  font-weight: 400;
-  color: #fff; /* Set text color */
-  background-color: #0d4d8d; /* Set background color */
-  padding: 10px 15px; /* Add padding */
-  border-radius: 0; /* Remove border radius */
-  transition: background-color 0.3s; /* Add transition effect */
-  width: 40%; /* Set width */
-  margin: auto; /* Center button horizontally */
-  text-decoration: none; /* Remove underline */
+.show-details-button {
+  background-color: #0d4d8d; /* Background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove border */
+  padding: 0.5rem 1rem; /* Padding for button */
+  border-radius: none; /* Border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
-.details-button .btn {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 400;
-  width: 100%;
+.show-details-button:hover {
+  background-color: #0a3c78; /* Darker background color on hover */
 }
-
-.details-button:hover {
-  background-color: #0056b3; /* Hover background color */
-}
-
-.details-button:focus {
-  outline: none; /* Remove focus outline */
-}
-
-.details-button .btn {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 400;
-  width: 100%;
-}
-
-
-/* Add media query for smaller screens */
-@media (max-width: 576px) {
-  .job-card {
-    padding: 10px; /* Adjust padding */
-  }
-
-  .job-header {
-    font-size: 1.5rem; /* Adjust font size */
-  }
-
-  .job-details {
-    width: 90%; /* Adjust width */
-  }
-
-  .details-button {
-    width: 60%; /* Adjust width */
-  }
-}
-
