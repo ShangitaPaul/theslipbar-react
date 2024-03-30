@@ -2,12 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import JobList from './JobList';
+import JobDetails from './JobDetail'; // Assuming JobDetails component exists
 import '../styles/JobsPage.css';
 
 function JobsPage() {
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [locationFilter, setLocationFilter] = useState('');
+  const [selectedJob, setSelectedJob] = useState(null);
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -32,6 +34,10 @@ function JobsPage() {
     }
   }, [locationFilter, jobs]);
 
+  const handleJobClick = (job) => {
+    setSelectedJob(job);
+  };
+
   return (
     <div className="jobs-page">
       <h2 className="page-title">Come Join Us!</h2>
@@ -43,7 +49,8 @@ function JobsPage() {
           {/* Add more locations as needed */}
         </select>
       </div>
-      <JobList jobs={filteredJobs} />
+      <JobList jobs={filteredJobs} onJobClick={handleJobClick} />
+      {selectedJob && <JobDetails job={selectedJob} />}
     </div>
   );
 }
