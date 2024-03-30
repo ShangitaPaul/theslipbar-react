@@ -76,7 +76,7 @@
 }
 
 
-@media (width: 576px) {
+@media (max-width: 576px) {
   .carousel-caption {
     font-size: 50%;
   }
