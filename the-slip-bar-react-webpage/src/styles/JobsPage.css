@@ -147,21 +147,78 @@
 
 }
 
-/* Add media query for smaller screens */
+
 @media (max-width: 576px) {
-  .job-card {
-    padding: 10px; /* Adjust padding */
-  }
-
-  .job-header {
-    font-size: 1.5rem; /* Adjust font size */
-  }
-
   .job-details {
-    width: 90%; /* Adjust width */
+    width: 90%; /* Adjust width for smaller screens */
   }
 
   .details-button {
-    width: 60%; /* Adjust width */
+    width: 60%; /* Adjust width for smaller screens */
+  }
+
+  .page-title {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .filter-section {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .job-card {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .job-header {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .job-details p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .details-button {
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+  }
+
+  .details-button .btn {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .page-title {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .filter-section {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .job-card {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .job-header {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .job-details p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .details-button {
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+  }
+
+  .details-button .btn {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .button-container .btn {
+    font-size: 90%; /* Adjust font size for smaller screens */
+  }
+
+  .button-container .btn:hover {
+    font-size: 90%; /* Adjust font size for smaller screens */
   }
 }
+
