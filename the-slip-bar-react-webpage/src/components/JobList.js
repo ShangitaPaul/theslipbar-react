@@ -1,15 +1,29 @@
 // JobList.js
-import React from 'react';
-import JobListItem from './JobListItem';
+import React, { useState } from 'react';
+import JobDetail from './JobDetail';
 
-const JobList = ({ jobs, expandedJob, toggleJobDetails }) => {
+function JobList({ jobs }) {
+  const [expandedJobId, setExpandedJobId] = useState(null);
+
+  const toggleJobDetails = (jobId) => {
+    setExpandedJobId(prevJobId => prevJobId === jobId ? null : jobId);
+  };
+
   return (
-    <div className="jobs-container">
+    <ul>
       {jobs.map(job => (
-        <JobListItem key={job.id} job={job} expanded={expandedJob === job.id} toggleDetails={toggleJobDetails} />
+        <li key={job.id}>
+          <div>
+            <h3>{job.title}</h3>
+            <button onClick={() => toggleJobDetails(job.id)}>
+              {expandedJobId === job.id ? 'Hide Details' : 'Show Details'}
+            </button>
+          </div>
+          {expandedJobId === job.id && <JobDetail job={job} />}
+        </li>
       ))}
-    </div>
+    </ul>
   );
-};
+}
 
 export default JobList;

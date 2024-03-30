@@ -11,7 +11,7 @@ function Navigation() {
   };
 
   return (
-    <Navbar expand="lg" bg="light" className="navbar-with-border">
+    <Navbar expand="lg" bg="light" className="navbar-with-border" expanded={expanded}>
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img
@@ -21,11 +21,10 @@ function Navigation() {
             className="d-inline-block align-top"
             alt="The Slip Bar"
           />
-      
         </Navbar.Brand>
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
-        <Navbar.Collapse id="basic-navbar-nav" expanded={expanded} onToggle={handleToggle}>
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>

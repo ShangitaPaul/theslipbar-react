@@ -7,9 +7,9 @@ import lomitaMenu2 from "../menus/lomitamenupage1.jpg"; // Corrected file extens
 import lomitaMap from "../maps/lomitamap.png"; // Corrected file path
 import "../styles/Lomita.css";
 
+
 const Lomita = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [carouselWidth, setCarouselWidth] = useState(null);
 
   useEffect(() => {
     const script = document.createElement("script");
