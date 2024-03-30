@@ -1,3 +1,4 @@
+
 /* Common styles for all screen sizes */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -73,4 +74,31 @@
   display: flex;
   justify-content: center;
   margin-bottom: 1px;
+}
+
+
+@media (max-width: 576px) {
+  .carousel-caption {
+    font-size: 100%;
+  }
+
+  .carousel-caption h3 {
+    font-size: 140%;
+  }
+
+  .carousel-caption p {
+    font-size: 100%;
+  }
+
+  .button-container .btn {
+    font-size: 90%;
+  }
+
+  .button-container .btn:hover {
+    font-size: 90%;
+  }
+
+  .transparent-btn {
+    font-size: 90%;
+  }
 }

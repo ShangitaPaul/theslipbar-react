@@ -18,12 +18,26 @@
 
 }
 
-#locationFilter {
+/* #locationFilter {
+  display: flex;
+  flex-direction: column;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  margin-bottom: 50px;
+  max-width: 800px;
   margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+} */
+
+.filter-section {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 50px;
 }
+
 
 .page-title {
   font-size: 3rem;
@@ -131,5 +145,80 @@
   font-weight: 400;
   width: 
 
+}
+
+
+@media (max-width: 576px) {
+  .job-details {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .details-button {
+    width: 60%; /* Adjust width for smaller screens */
+  }
+
+  .page-title {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .filter-section {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .job-card {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .job-header {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .job-details p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .details-button {
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+  }
+
+  .details-button .btn {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .page-title {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .filter-section {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .job-card {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .job-header {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .job-details p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .details-button {
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+  }
+
+  .details-button .btn {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .button-container .btn {
+    font-size: 90%; /* Adjust font size for smaller screens */
+  }
+
+  .button-container .btn:hover {
+    font-size: 90%; /* Adjust font size for smaller screens */
+  }
 }
 
