@@ -1,3 +1,4 @@
+// Fixing the typo from expandedJobId to expandedJob
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import JobList from './JobList';
@@ -8,8 +9,7 @@ function JobsPage() {
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [locationFilter, setLocationFilter] = useState('');
-  const [expandedJob, setExpandedJob] = useState(null);
-
+  const [expandedJob, setExpandedJob] = useState(null); // Corrected variable name
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -26,7 +26,7 @@ function JobsPage() {
   }, []);
 
   const toggleJobDetails = (jobId) => {
-    setExpandedJobId((prevJobId) => (prevJobId === jobId ? null : jobId));
+    setExpandedJob((prevJobId) => (prevJobId === jobId ? null : jobId)); // Corrected variable name
   };
 
   return (
@@ -39,13 +39,13 @@ function JobsPage() {
           <option value="Redondo Beach">Redondo Beach</option>
         </select>
       </div>
-      <JobList jobs={filteredJobs} expandedJobId={expandedJobId} toggleJobDetails={toggleJobDetails} />
-      {expandedJobId && (
+      <JobList jobs={filteredJobs} expandedJob={expandedJob} toggleJobDetails={toggleJobDetails} />
+      {expandedJob && (
         <div className="details-button-container">
-          <button className="details-button" onClick={() => setExpandedJobId(null)}>
+          <button className="details-button" onClick={() => setExpandedJob(null)}>
             Close Details
           </button>
-          <JobDetail job={jobs.find((job) => job.id === expandedJobId)} />
+          <JobDetail job={jobs.find((job) => job.id === expandedJob)} />
         </div>
       )}
     </div>
