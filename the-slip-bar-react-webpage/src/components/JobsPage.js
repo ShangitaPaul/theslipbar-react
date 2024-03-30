@@ -48,8 +48,11 @@ function JobsPage() {
         </select>
       </div>
       <JobList jobs={filteredJobs} expandedJob={expandedJob} toggleJobDetails={toggleJobDetails} />
-      {expandedJob && (
+      {expandedJob !== null && (
         <div className="details-button-container">
+          <button className="details-button" onClick={() => setExpandedJob(null)}>
+            Close Details
+          </button>
           <JobDetail job={jobs.find(job => job.id === expandedJob)} />
         </div>
       )}
