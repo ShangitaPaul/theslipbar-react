@@ -1,4 +1,3 @@
-// JobPage.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import JobList from './JobList';
@@ -40,7 +39,7 @@ function JobsPage() {
 
   return (
     <div className="jobs-page">
-      <h7 className="page-title">Come Join Us!</h7>
+      <h2 className="page-title">Come Join Us!</h2>
       <div className="filter-section">
         <select id="locationFilter" value={locationFilter} onChange={e => setLocationFilter(e.target.value)}>
           <option value="">All Locations</option>
@@ -51,9 +50,6 @@ function JobsPage() {
       <JobList jobs={filteredJobs} expandedJob={expandedJob} toggleJobDetails={toggleJobDetails} />
       {expandedJob && (
         <div className="details-button-container">
-          <button className="details-button" onClick={() => setExpandedJob(null)}>
-            Close Details
-          </button>
           <JobDetail job={jobs.find(job => job.id === expandedJob)} />
         </div>
       )}
