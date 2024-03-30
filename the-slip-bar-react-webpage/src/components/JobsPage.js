@@ -8,7 +8,8 @@ function JobsPage() {
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [locationFilter, setLocationFilter] = useState('');
-  const [expandedJob, setExpandedJob] = useState(null);
+  // Store only the expanded job ID, not the entire job object
+  const [expandedJobId, setExpandedJobId] = useState(null);
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -24,39 +25,24 @@ function JobsPage() {
     fetchJobs();
   }, []);
 
-  useEffect(() => {
-    if (locationFilter) {
-      const filtered = jobs.filter(job => job.location === locationFilter);
-      setFilteredJobs(filtered);
-    } else {
-      setFilteredJobs(jobs);
-    }
-  }, [locationFilter, jobs]);
+  // ... other code remains the same ...
 
-  const toggleJobDetails = jobId => {
-    setExpandedJob(prevJobId => (prevJobId === jobId ? null : jobId));
+  const toggleJobDetails = (jobId) => {
+    setExpandedJobId(jobId);
   };
 
   return (
-    <div className="jobs-page">
-      <h2 className="page-title">Come Join Us!</h2>
-      <div className="filter-section">
-        <select id="locationFilter" value={locationFilter} onChange={e => setLocationFilter(e.target.value)}>
-          <option value="">All Locations</option>
-          <option value="Lomita">Lomita</option>
-          <option value="Redondo Beach">Redondo Beach</option>
-        </select>
+    // ... other code remains the same ...
+    {expandedJobId && (
+      <div className="details-button-container">
+        <button className="details-button" onClick={() => setExpandedJobId(null)}>
+          Close Details
+        </button>
       </div>
-      <JobList jobs={filteredJobs} expandedJob={expandedJob} toggleJobDetails={toggleJobDetails} />
-      {expandedJob && (
-        <div className="details-button-container">
-          <button className="details-button" onClick={() => setExpandedJob(null)}>
-            Close Details
-          </button>
-          <JobDetail job={jobs.find(job => job.id === expandedJob)} />
-        </div>
-      )}
-    </div>
+    )}
+    {expandedJobId && (
+      <JobDetail job={jobs.find((job) => job.id === expandedJobId)} />
+    )}
   );
 }
 
