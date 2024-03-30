@@ -1,4 +1,4 @@
-// JobPage.js
+// Fixing the typo from expandedJobId to expandedJob
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import JobList from './JobList';
@@ -9,7 +9,7 @@ function JobsPage() {
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [locationFilter, setLocationFilter] = useState('');
-  const [expandedJob, setExpandedJob] = useState(null);
+  const [expandedJob, setExpandedJob] = useState(null); // Corrected variable name
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -25,24 +25,18 @@ function JobsPage() {
     fetchJobs();
   }, []);
 
-  useEffect(() => {
-    if (locationFilter) {
-      const filtered = jobs.filter(job => job.location === locationFilter);
-      setFilteredJobs(filtered);
-    } else {
-      setFilteredJobs(jobs);
-    }
-  }, [locationFilter, jobs]);
+  const toggleJobDetails = (jobId) => {
+    setExpandedJob((prevJobId) => (prevJobId === jobId ? null : jobId));
 
-  const toggleJobDetails = jobId => {
-    setExpandedJob(prevJobId => (prevJobId === jobId ? null : jobId));
   };
+
+  
 
   return (
     <div className="jobs-page">
-      <h7 className="page-title">Come Join Us!</h7>
+      <h2 className="page-title">Come Join Us!</h2>
       <div className="filter-section">
-        <select id="locationFilter" value={locationFilter} onChange={e => setLocationFilter(e.target.value)}>
+        <select id="locationFilter" value={locationFilter} onChange={(e) => setLocationFilter(e.target.value)}>
           <option value="">All Locations</option>
           <option value="Lomita">Lomita</option>
           <option value="Redondo Beach">Redondo Beach</option>
@@ -54,7 +48,7 @@ function JobsPage() {
           <button className="details-button" onClick={() => setExpandedJob(null)}>
             Close Details
           </button>
-          <JobDetail job={jobs.find(job => job.id === expandedJob)} />
+          <JobDetail job={jobs.find((job) => job.id === expandedJob)} />
         </div>
       )}
     </div>

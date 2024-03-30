@@ -143,11 +143,23 @@ h
   outline: none; /* Remove focus outline */
 }
 
-.details-button .btn {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 400;
-  width: 
 
+/* Add media query for smaller screens */
+@media (max-width: 576px) {
+  .job-card {
+    padding: 10px; /* Adjust padding */
+  }
+
+  .job-header {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .job-details {
+    width: 90%; /* Adjust width */
+  }
+
+  .details-button {
+    width: 60%; /* Adjust width */
+  }
 }
-
 
